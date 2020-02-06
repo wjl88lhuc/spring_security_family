@@ -1,0 +1,18 @@
+server:
+  port: 9001
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security_authority
+    username: root
+    password: python123
+  main:
+    allow-bean-definition-overriding: true  #  允许我们自己覆盖spring放入到IOC容器中的对象,一定要配置
+mybatis:
+  type-aliases-package: com.itheima.domain
+  configuration:
+    map-underscore-to-camel-case: true  # 驼峰模式
+logging:
+  level:
+    com.itheima: debug

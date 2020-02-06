@@ -1,0 +1,21 @@
+server:
+  port: 9002
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security_authority
+    username: root
+    password: python123
+mybatis:
+  type-aliases-package: com.itheima.domain
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.itheima: debug
+
+#自定义配置。自定义配置需要自己去读取，而非自定义配置则由框架自己读取
+#服务只能有公钥
+rsa:
+  key:
+    pubKeyPath: D:/auth_key/id_key_rsa.pub
